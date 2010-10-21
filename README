@@ -1,0 +1,7 @@
+Since a few people asked me if they can have PicasaWeb based image gallery on their website, I decided to convert my bbcode generator into image gallery and wrote little tutorial that is posted on net.tutsplus.com.
+Compatibility
+
+This tool was tested to work only with Firefox 3.0.0, Google Chrome 0.2, and IE 7.0. This web site has PHP version 5.2.6, therefore I cannot guaranty work on earlier versions. SimpleXML required.
+Licence
+
+Picasa Web To Web Site by Mikhail Kozlov is free to use and or modify in any way.
