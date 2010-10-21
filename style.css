@@ -1,0 +1,119 @@
+body{
+	font-family:Tahoma;
+}
+h1{
+	font-size:2em;
+	font-weight:normal;
+	margin:.8em 0;
+}
+h2{
+	font-size:1.4em;
+	font-weight:normal;
+	margin:.8em 0;
+}
+div.scrollable { 
+    /* required settings */ 
+    position:relative; 
+    overflow:hidden; 
+    height:90px; 
+} 
+/* 
+    root element for scrollable items. Must be absolutely positioned 
+    and it should have a super large width to accomodate scrollable items. 
+    it's enough that you set width and height for the root element and 
+    not for this element. 
+*/ 
+div.scrollable div.items { 
+    /* this cannot be too large */ 
+    width:20000em; 
+    position:absolute; 
+} 
+/* single scrollable item */
+div.scrollable div.items img, #pic_holder img{
+	cursor:pointer;
+	float:left;
+	/* custom decoration */
+	padding:2px;
+	margin:2px;
+	border:1px solid  #ccc;
+	opacity:.8;
+}
+#pic_holder{
+	min-height:300px;
+}
+#pic_holder img{
+	opacity:1;
+}
+#pic_holder div.loading{
+	text-align:center;
+	width:100%;
+}
+ #pic_holder div.loading img{
+ 	border-width:0;
+	float:none;
+ }
+/* active item */
+div.scrollable div.items img.active, #pic_holder img.active{
+	border:1px solid #FF6600;		
+	background-color:#EDEDED;
+	opacity:1;
+}
+/* this makes it possible to add next button beside scrollable */
+div.scrollable {
+	float:left;	
+}
+/* prev, next, prevPage and nextPage buttons */
+#prev, #next, a.prevPage, a.nextPage {
+	display:block;
+	width:18px;
+	height:18px;
+	background:url(img/left.png) no-repeat;
+	float:left;
+	margin:34px 10px;
+	cursor:pointer;
+	font-size:1px;
+}
+#prev{
+	margin-left:20px;
+}
+#next{
+	margin-left:0px;
+}
+/* mouseover state */
+#prev:hover, #next:hover, a.prevPage:hover, a.nextPage:hover {
+	background-position:0px -18px;		
+}
+/* disabled navigational button */
+a.disabled {
+	visibility:hidden !important;		
+}
+/* next button uses another background image */
+#next, a.nextPage {
+	background-image:url(img/right.png);
+	clear:right;	
+}
+/*********** navigator ***********/
+/* position and dimensions of the navigator */
+#navi {
+	height:20px;
+	text-align:center;
+}
+/* items inside navigator */
+#navi a {
+	background:url(img/navigator.png) 0 0 no-repeat;
+	display:block;
+	float:left;
+	font-size:1px;
+	height:8px;
+	margin:3px;
+	width:8px;
+}
+/* mouseover state */
+#navi a:hover {
+	background-position:0 -8px;      
+}
+/* active state (current page state) */
+#navi a.active {
+	background-position:0 -16px;     
+} 	
+
